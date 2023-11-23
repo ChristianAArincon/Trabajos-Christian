@@ -1,0 +1,56 @@
+<! INICIO COMPRA MadeToBuy !>
+
+"Tienda Online De Ventas Automoviles"
+
+    <*Productos*>
+        "Coches"
+        "Motos"
+        "Bicicletas"
+        "Quads"
+        "Patinetes"
+        "Componentes"
+    <*/Productos*>
+
+<*Compra*>  
+    <*Formulario de Compra*>
+
+        <*Cliente>
+                {"Nombre"} = Christian
+                {"Apellidos"} = Alonso Alonso
+                {"IDProducto"} = "Coche"
+                {"SubProducto"} = BMW M4 Deluxe Edition
+                {"Domicilio"} = 57 Arucas
+                {"Metodo Pago"} = Transferencia Banacaria "XXX-XXX-XX89"
+        <*/Cliente>
+        
+        <*Cesta>
+            (Elementos en cesta) = {1}
+                Descripcion: $<*Cliente> = $<*IDProducto> = "BMW M4 Deluxe Edition"
+            <*Reservas*> 
+              "{Reserva estimada para "25/11/2024"}"
+            </*Reservas*>
+            <*Cantidad*>
+                "{Se han selecionado 1 articulo}"
+            </*Cantidad*>
+        <*/Cesta>
+
+         <*DirrecionEnvio*>
+             {PAIS} = "ESPAÑA
+                  {PROVINCIA} = "LAS PALMAS"
+                    {CIUDAD} = "ARUCAS"
+                        {CALLE} = "LENGUAJE MARCAS CHRIS"
+                            {NUMERO PUERTA} = "57"
+                                {FECHA ENVIO} = "22/11/2023"
+         </*DirrecionEnvio*>
+
+
+     </*Formulario de Compra*>
+
+        <*Devoluciones>
+            {IDProducto} = <*Productos*> - "Componente"
+            {Fecha Devolucion} = "19/11/2023"
+            {Razon Devolucion} "Producto Defectuoso"
+        </*Devoluciones>
+</*Compra*>  
+
+<! FIN COMPRA !>    
